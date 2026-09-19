@@ -23,36 +23,66 @@
       font-size: 32px;
       font-weight: normal;
       letter-spacing: 0.15em;
-      margin-bottom: 10px;
+      margin: 0 0 12px;
     }
 
     .subtitle {
-      font-size: 12px;
+      font-size: 11px;
       letter-spacing: 0.2em;
       color: #777;
     }
 
     nav {
-      margin: 30px auto;
-      max-width: 300px;
+      max-width: 575px;
+      margin: 30px auto 0;
+      padding: 0 20px;
+      box-sizing: border-box;
     }
 
     nav a {
       display: block;
-      padding: 18px;
+      padding: 19px 15px;
       margin: 10px 0;
       border: 1px solid #aaa;
       color: #333;
       text-decoration: none;
-      background: rgba(255,255,255,0.4);
+      background: rgba(255,255,255,0.35);
+      letter-spacing: 0.08em;
     }
 
-    nav a:hover {
-      background: #fff;
+    .clap {
+      margin: 75px auto 0;
+      padding: 25px 20px;
+      max-width: 350px;
+      border-top: 1px solid #aaa;
+      border-bottom: 1px solid #aaa;
+    }
+
+    .clap-title {
+      font-size: 14px;
+      letter-spacing: 0.15em;
+      margin-bottom: 10px;
+    }
+
+    .clap-text {
+      font-size: 11px;
+      color: #777;
+      margin-bottom: 18px;
+    }
+
+    .clap-button {
+      display: inline-block;
+      padding: 10px 25px;
+      border: 1px solid #aaa;
+      color: #333;
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      background: rgba(255,255,255,0.35);
     }
 
     footer {
-      margin-top: 80px;
+      margin-top: 70px;
       padding: 30px;
       font-size: 11px;
       color: #888;
@@ -64,15 +94,50 @@
 
   <header>
     <h1>甘味甘舎</h1>
-    <div class="subtitle">KAMIAMASHA</div>
+
+    <div class="subtitle">
+      KAMIAMASHA
+    </div>
   </header>
 
+
   <nav>
-    <a href="#">NOVEL</a>
-    <a href="#">ILLUSTRATION</a>
-    <a href="#">OFFLINE</a>
-    <a href="#">ABOUT</a>
+
+    <a href="about.html">
+      ABOUT
+    </a>
+
+    <a href="novel.html">
+      NOVEL
+    </a>
+
+    <a href="#">
+      ILLUSTRATION
+    </a>
+
+    <a href="#">
+      OFFLINE
+    </a>
+
   </nav>
+
+
+  <section class="clap">
+
+    <div class="clap-title">
+      WEB CLAP
+    </div>
+
+    <div class="clap-text">
+      ひとこといただけると嬉しいです
+    </div>
+
+    <a class="clap-button" href="#">
+      👏 ひとこと送る
+    </a>
+
+  </section>
+
 
   <footer>
     © 甘味甘舎
