@@ -2,6 +2,7 @@
 <html lang="ja">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,63 +10,90 @@
 
 <style>
 
+/* =========================
+   基本設定
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
+
     background: #f4f1e8;
     color: #333;
+
     font-family: sans-serif;
+
     text-align: center;
+
     line-height: 1.8;
 }
 
-/* ページ全体 */
+
+/* =========================
+   ページ全体
+   ========================= */
+
 .container {
+    width: calc(100% - 32px);
+
     max-width: 700px;
+
     margin: 0 auto;
-    padding: 45px 28px 60px;
+
+    padding: clamp(45px, 9vw, 70px) 0 60px;
 }
 
-/* サイト名 */
-.site-name {
-    font-size: 25px;
-    letter-spacing: 0.25em;
-    margin-bottom: 0;
-}
 
-.site-name-en {
-    font-size: 12px;
-    color: #777;
-    letter-spacing: 0.3em;
-    margin-top: 5px;
-}
+/* =========================
+   ページタイトル
+   ========================= */
 
-/* ページタイトル */
 .page-title {
-    font-size: 32px;
+    font-size: clamp(28px, 7vw, 34px);
+
     font-weight: normal;
+
     letter-spacing: 0.3em;
-    margin-top: 45px;
-    margin-bottom: 5px;
+
+    margin: 0 0 5px;
 }
 
 .page-subtitle {
-    font-size: 13px;
+    font-size: 12px;
+
     letter-spacing: 0.3em;
+
     color: #666;
-    margin-bottom: 45px;
+
+    margin-bottom: clamp(35px, 8vw, 50px);
 }
 
-/* 区切り線 */
+
+/* =========================
+   区切り線
+   ========================= */
+
 .divider {
     border-top: 1px solid #aaa;
+
     margin: 0 0 28px;
 }
 
-/* ジャンル */
+
+/* =========================
+   ジャンル
+   ========================= */
+
 .category {
     text-align: left;
+
     margin-bottom: 30px;
+
     padding-bottom: 25px;
+
     border-bottom: 1px solid #aaa;
 }
 
@@ -73,103 +101,218 @@ body {
     border-bottom: none;
 }
 
-/* ジャンルタイトル */
+
+/* =========================
+   ジャンルタイトル
+   ========================= */
+
 .category-title {
     font-size: 18px;
+
     font-weight: normal;
+
     letter-spacing: 0.04em;
+
     white-space: nowrap;
+
     margin: 0 0 20px;
+
     padding-left: 13px;
+
     border-left: 5px solid #aaa;
 }
 
-/* 作品 */
+
+/* =========================
+   作品
+   ========================= */
+
 .work {
     margin-left: 45px;
+
     margin-bottom: 22px;
 }
 
-/* 作品タイトル */
+
+/* =========================
+   作品タイトル
+   ========================= */
+
 .work a {
     color: #333;
+
     font-size: 16px;
+
     text-decoration: underline;
+
     text-underline-offset: 5px;
+
     letter-spacing: 0.08em;
 }
 
-/* 作品説明 */
+
+/* =========================
+   作品説明
+   ========================= */
+
 .description {
     color: #777;
+
     font-size: 13px;
+
     margin-top: 3px;
+
     letter-spacing: 0.05em;
 }
 
-/* TOPへ戻る */
+
+/* =========================
+   TOPへ戻る
+   ========================= */
+
 .top-link {
     text-align: left;
+
     margin-top: 35px;
 }
 
 .top-link a {
     color: #333;
+
     font-size: 15px;
+
     letter-spacing: 0.12em;
+
     text-decoration: underline;
+
     text-underline-offset: 5px;
 }
 
-/* WEB CLAP */
+
+/* =========================
+   WEB CLAP
+   ========================= */
+
 .web-clap {
     border-top: 1px solid #aaa;
+
     margin-top: 50px;
+
     padding-top: 30px;
 }
 
 .web-clap-title {
     font-size: 16px;
+
     letter-spacing: 0.25em;
 }
 
 .web-clap-text {
     font-size: 12px;
+
     color: #888;
+
     margin-top: 5px;
 }
 
 .web-clap a {
     color: #333;
+
     text-decoration: none;
 }
 
-/* コピーライト */
+
+/* =========================
+   コピーライト
+   ========================= */
+
 .copyright {
     margin-top: 45px;
+
     color: #888;
+
     font-size: 12px;
 }
 
+
+/* =========================
+   スマホ用
+   ========================= */
+
+@media (max-width: 480px) {
+
+    .container {
+        width: calc(100% - 28px);
+
+        padding-top: 45px;
+    }
+
+
+    /*
+       長いジャンル名も
+       1行に収める
+    */
+
+    .category-title {
+        font-size: 16px;
+
+        padding-left: 10px;
+
+        border-left-width: 4px;
+
+        letter-spacing: 0.02em;
+    }
+
+
+    .work {
+        margin-left: 25px;
+    }
+
+
+    .work a {
+        font-size: 15px;
+    }
+
+
+    .description {
+        font-size: 12px;
+    }
+
+
+    .web-clap {
+        margin-top: 45px;
+    }
+
+}
+
+
+/* =========================
+   タブレット・PC
+   ========================= */
+
+@media (min-width: 768px) {
+
+    .container {
+        width: calc(100% - 56px);
+    }
+
+}
+
 </style>
+
 </head>
 
 
 <body>
 
+
 <div class="container">
 
-    <!-- サイト名 -->
-    <div class="site-name">
-        甘味甘舎
-    </div>
 
-    <div class="site-name-en">
-        KANMIKANSYA
-    </div>
+    <!-- =========================
+         ページタイトル
+         ========================= -->
 
-
-    <!-- ページタイトル -->
     <h1 class="page-title">
         NOVEL
     </h1>
@@ -182,7 +325,10 @@ body {
     <div class="divider"></div>
 
 
-    <!-- ジェイド × ブロッケンJr. -->
+    <!-- =========================
+         ジェイド × ブロッケンJr.
+         ========================= -->
+
     <section class="category">
 
         <h2 class="category-title">
@@ -191,6 +337,7 @@ body {
 
 
         <div class="work">
+
             <a href="novel1.html">
                 巣へと運ぶアプローチ
             </a>
@@ -198,10 +345,12 @@ body {
             <div class="description">
                 弟子の献身を介護と勘違いするレーラァのラブコメ
             </div>
+
         </div>
 
 
         <div class="work">
+
             <a href="novel2.html">
                 これでいいのだ
             </a>
@@ -209,10 +358,12 @@ body {
             <div class="description">
                 グッドエンドにはいけなかった師弟
             </div>
+
         </div>
 
 
         <div class="work">
+
             <a href="novel3.html">
                 ハッピー帰省☆マテリアル
             </a>
@@ -220,12 +371,16 @@ body {
             <div class="description">
                 強制巣立ち後に帰省したジェイドのスピード和解
             </div>
+
         </div>
 
     </section>
 
 
-    <!-- バッファローマン × ブロッケンJr. -->
+    <!-- =========================
+         バッファローマン × ブロッケンJr.
+         ========================= -->
+
     <section class="category">
 
         <h2 class="category-title">
@@ -234,6 +389,7 @@ body {
 
 
         <div class="work">
+
             <a href="novel4.html">
                 下心
             </a>
@@ -241,10 +397,12 @@ body {
             <div class="description">
                 口を開ける癖のあるブロッケンを茶化したら口を矯正することになるバッファ
             </div>
+
         </div>
 
 
         <div class="work">
+
             <a href="novel5.html">
                 半端
             </a>
@@ -252,12 +410,16 @@ body {
             <div class="description">
                 好きな子を子供扱いしつつ大人にしたいバッファの葛藤
             </div>
+
         </div>
 
     </section>
 
 
-    <!-- パロディ -->
+    <!-- =========================
+         パロディ
+         ========================= -->
+
     <section class="category">
 
         <h2 class="category-title">
@@ -266,6 +428,7 @@ body {
 
 
         <div class="work">
+
             <a href="novel6.html">
                 鬼子
             </a>
@@ -273,12 +436,16 @@ body {
             <div class="description">
                 妖怪パロJブロ
             </div>
+
         </div>
 
     </section>
 
 
-    <!-- 単発 -->
+    <!-- =========================
+         単発
+         ========================= -->
+
     <section class="category">
 
         <h2 class="category-title">
@@ -287,6 +454,7 @@ body {
 
 
         <div class="work">
+
             <a href="novel7.html">
                 よいこのおやすみ
             </a>
@@ -294,20 +462,29 @@ body {
             <div class="description">
                 眠れないスカーがレーラァに振り回される話
             </div>
+
         </div>
 
     </section>
 
 
-    <!-- TOPへ -->
+    <!-- =========================
+         TOPへ戻る
+         ========================= -->
+
     <div class="top-link">
+
         <a href="index.html">
             ← TOP
         </a>
+
     </div>
 
 
-    <!-- WEB CLAP -->
+    <!-- =========================
+         WEB CLAP
+         ========================= -->
+
     <div class="web-clap">
 
         <div class="web-clap-title">
@@ -315,20 +492,30 @@ body {
         </div>
 
         <div class="web-clap-text">
+
             <a href="#">
                 ひとこといただけると嬉しいです
             </a>
+
         </div>
 
     </div>
 
 
-    <!-- コピーライト -->
+    <!-- =========================
+         コピーライト
+         ========================= -->
+
     <div class="copyright">
+
         © 甘味甘舎
+
     </div>
+
 
 </div>
 
+
 </body>
+
 </html>
