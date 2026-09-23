@@ -1,316 +1,155 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>CONTACT｜甘味甘舎</title>
-
-<style>
-
-/* =========================
-   基本設定
-   ========================= */
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    background: #f4f1e8;
-    color: #333;
-    font-family: sans-serif;
-    line-height: 1.8;
-}
-
-
-/* =========================
-   ページ全体
-   ========================= */
-
-.container {
-    width: calc(100% - 32px);
-    max-width: 700px;
-    margin: 0 auto;
-
-    padding: clamp(50px, 10vw, 75px) 0 60px;
-}
-
-
-/* =========================
-   ページタイトル
-   ========================= */
-
-.page-title {
-    text-align: center;
-
-    font-size: clamp(28px, 7vw, 34px);
-    font-weight: normal;
-
-    letter-spacing: 0.3em;
-
-    margin: 0 0 8px;
-}
-
-.page-subtitle {
-    text-align: center;
-
-    font-size: 12px;
-
-    letter-spacing: 0.25em;
-
-    color: #666;
-
-    margin-bottom: clamp(35px, 8vw, 50px);
-}
-
-
-/* =========================
-   区切り線
-   ========================= */
-
-.divider {
-    border-top: 1px solid #aaa;
-
-    margin-bottom: 30px;
-}
-
-
-/* =========================
-   説明文
-   ========================= */
-
-.description {
-    text-align: center;
-
-    font-size: 13px;
-
-    color: #666;
-
-    letter-spacing: 0.05em;
-
-    margin-bottom: 30px;
-}
-
-
-/* =========================
-   フォームエリア
-   ========================= */
-
-.form-area {
-    width: 100%;
-
-    background: rgba(255, 255, 255, 0.25);
-
-    border: 1px solid #aaa;
-
-    padding: clamp(10px, 3vw, 25px);
-}
-
-
-/* Googleフォーム */
-
-.google-form {
-    width: 100%;
-}
-
-
-/*
-   Googleフォームのiframeを
-   入れる場合の設定です。
-*/
-
-.google-form iframe {
-    display: block;
-
-    width: 100%;
-
-    max-width: 100%;
-
-    border: none;
-}
-
-
-/* =========================
-   NOVELなどへ戻るリンク
-   ========================= */
-
-.back-link {
-    margin-top: 50px;
-
-    padding-top: 25px;
-
-    border-top: 1px solid #aaa;
-
-    text-align: center;
-}
-
-.back-link a {
-    color: #333;
-
-    font-size: 14px;
-
-    letter-spacing: 0.1em;
-
-    text-decoration: underline;
-
-    text-underline-offset: 5px;
-}
-
-
-/* =========================
-   コピーライト
-   ========================= */
-
-.copyright {
-    margin-top: 35px;
-
-    text-align: center;
-
-    color: #888;
-
-    font-size: 11px;
-}
-
-
-/* =========================
-   スマホ
-   ========================= */
-
-@media (max-width: 480px) {
-
-    .container {
-        width: calc(100% - 28px);
-
-        padding-top: 45px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CONTACT | 甘味甘舎</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: #f4f1e8;
+      color: #333;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+        "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+      line-height: 1.9;
+    }
+
+    main {
+      max-width: 575px;
+      margin: 70px auto 100px;
+      padding: 0 24px;
     }
 
     .page-title {
-        font-size: 28px;
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .page-title h1 {
+      margin: 0;
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+    }
+
+    .page-title p {
+      margin: 5px 0 0;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: #777;
+    }
+
+    .divider {
+      border-top: 1px solid #ccc7ba;
+      margin-bottom: 40px;
     }
 
     .description {
-        font-size: 12px;
+      margin: 0 0 35px;
+      font-size: 13px;
     }
 
+    /* Googleフォーム */
     .form-area {
-        padding: 8px;
+      width: 100%;
+      overflow: hidden;
     }
 
-}
-
-
-/* =========================
-   タブレット・PC
-   ========================= */
-
-@media (min-width: 768px) {
-
-    .container {
-        width: calc(100% - 56px);
+    .form-area iframe {
+      display: block;
+      width: 100%;
+      min-height: 850px;
+      border: none;
     }
 
-}
+    .back {
+      margin-top: 55px;
+      padding-top: 25px;
+      border-top: 1px solid #ccc7ba;
+      text-align: center;
+    }
 
-</style>
+    .back a {
+      color: #555;
+      text-decoration: none;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+    }
 
+    .back a:hover {
+      opacity: 0.55;
+    }
+
+    .copyright {
+      margin-top: 30px;
+      text-align: center;
+      color: #777;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+    }
+
+    @media (max-width: 480px) {
+
+      main {
+        margin-top: 55px;
+        padding: 0 22px;
+      }
+
+      .page-title {
+        margin-bottom: 45px;
+      }
+
+      .description {
+        font-size: 12px;
+      }
+
+      .form-area iframe {
+        min-height: 900px;
+      }
+    }
+  </style>
 </head>
-
 
 <body>
 
+  <main>
 
-<div class="container">
-
-
-    <!-- =========================
-         ページタイトル
-         ========================= -->
-
-    <h1 class="page-title">
-        CONTACT
-    </h1>
-
-    <div class="page-subtitle">
-        お問い合わせ
+    <div class="page-title">
+      <h1>CONTACT</h1>
+      <p>お問い合わせ</p>
     </div>
-
-
-    <!-- =========================
-         区切り線
-         ========================= -->
 
     <div class="divider"></div>
 
-
-    <!-- =========================
-         説明
-         ========================= -->
-
-    <div class="description">
-
-        ご連絡はこちらからお願いします。<br>
-        感想・お問い合わせなどお気軽にどうぞ。
-
-    </div>
-
-
-    <!-- =========================
-         Googleフォーム
-         ========================= -->
+    <p class="description">
+      ご連絡はこちらからお願いします。<br>
+      感想・お問い合わせなどお気軽にどうぞ。
+    </p>
 
     <div class="form-area">
 
-        <div class="google-form">
-
-            <!--
-              Googleフォームを作成したら、
-              ここにGoogleフォームの
-              iframeコードを入れます。
-            -->
-
-            <p style="
-                text-align:center;
-                color:#888;
-                font-size:13px;
-                padding:30px 10px;
-            ">
-                ここにお問い合わせフォームが表示されます。
-            </p>
-
-        </div>
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSeEkT2CYHXtbLYypn9a2eKfZeOEOPEDIL-C7H1AEp4v8MuwMg/viewform?embedded=true"
+        loading="lazy">
+      </iframe>
 
     </div>
 
-
-    <!-- =========================
-         TOPへ戻る
-         ========================= -->
-
-    <div class="back-link">
-
-        <a href="index.html">
-            ← TOP
-        </a>
-
+    <div class="back">
+      <a href="index.html">← TOP</a>
     </div>
-
-
-    <!-- =========================
-         コピーライト
-         ========================= -->
 
     <div class="copyright">
-        © 甘味甘舎
+      © 甘味甘舎
     </div>
 
-
-</div>
-
+  </main>
 
 </body>
-
 </html>
