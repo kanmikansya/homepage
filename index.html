@@ -1,59 +1,108 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>甘味甘舎</title>
 
   <style>
+
+    /* =========================
+       基本設定
+       ========================= */
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       background: #f4f1e8;
       color: #333;
       font-family: sans-serif;
       text-align: center;
+      min-height: 100vh;
     }
 
+
+    /* =========================
+       ヘッダー
+       ========================= */
+
     header {
-      padding: 80px 20px 50px;
+      width: 100%;
+      padding: clamp(55px, 10vw, 80px) 20px 50px;
     }
 
     h1 {
-      font-size: 32px;
+      font-size: clamp(27px, 5vw, 32px);
       font-weight: normal;
       letter-spacing: 0.15em;
       margin: 0 0 12px;
     }
 
     .subtitle {
-      font-size: 11px;
+      font-size: clamp(10px, 2vw, 11px);
       letter-spacing: 0.2em;
       color: #777;
     }
 
+
+    /* =========================
+       メニュー
+       ========================= */
+
     nav {
+      width: calc(100% - 40px);
       max-width: 575px;
       margin: 30px auto 0;
-      padding: 0 20px;
-      box-sizing: border-box;
     }
 
     nav a {
       display: block;
+      width: 100%;
       padding: 19px 15px;
       margin: 10px 0;
+
       border: 1px solid #aaa;
+
       color: #333;
       text-decoration: none;
-      background: rgba(255,255,255,0.35);
+
+      background: rgba(255, 255, 255, 0.35);
+
       letter-spacing: 0.08em;
+      font-size: 14px;
+
+      transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
     }
 
+
+    /* PCなどでマウスを乗せたとき */
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.65);
+      border-color: #888;
+    }
+
+
+    /* =========================
+       WEB CLAP
+       ========================= */
+
     .clap {
-      margin: 75px auto 0;
-      padding: 25px 20px;
+      width: calc(100% - 40px);
       max-width: 350px;
+
+      margin: clamp(55px, 9vw, 75px) auto 0;
+
+      padding: 25px 20px;
+
       border-top: 1px solid #aaa;
       border-bottom: 1px solid #aaa;
     }
@@ -72,34 +121,141 @@
 
     .clap-button {
       display: inline-block;
+
       padding: 10px 25px;
+
       border: 1px solid #aaa;
+
       color: #333;
       text-decoration: none;
+
       font-size: 12px;
       letter-spacing: 0.1em;
-      background: rgba(255,255,255,0.35);
+
+      background: rgba(255, 255, 255, 0.35);
+
+      transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
     }
 
+    .clap-button:hover {
+      background: rgba(255, 255, 255, 0.65);
+      border-color: #888;
+    }
+
+
+    /* =========================
+       隠しページ
+       ========================= */
+
+    .hidden-link {
+      margin-top: 28px;
+    }
+
+    .hidden-link a {
+      color: #aaa;
+      font-size: 14px;
+      text-decoration: none;
+
+      transition: color 0.2s ease;
+    }
+
+    .hidden-link a:hover {
+      color: #777;
+    }
+
+
+    /* =========================
+       フッター
+       ========================= */
+
     footer {
-      margin-top: 70px;
-      padding: 30px;
+      margin-top: clamp(55px, 9vw, 70px);
+
+      padding: 30px 20px;
+
       font-size: 11px;
       color: #888;
     }
+
+
+    /* =========================
+       スマホ用
+       ========================= */
+
+    @media (max-width: 480px) {
+
+      header {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+
+      nav {
+        width: calc(100% - 32px);
+      }
+
+      nav a {
+        padding: 17px 12px;
+      }
+
+      .clap {
+        width: calc(100% - 32px);
+      }
+
+      .hidden-link {
+        margin-top: 25px;
+      }
+
+    }
+
+
+    /* =========================
+       タブレット以上
+       ========================= */
+
+    @media (min-width: 768px) {
+
+      nav a {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      nav a:hover,
+      .clap-button:hover {
+        transform: translateY(-1px);
+      }
+
+    }
+
   </style>
+
 </head>
+
 
 <body>
 
+
+  <!-- =========================
+       サイトタイトル
+       ========================= -->
+
   <header>
-    <h1>甘味甘舎</h1>
+
+    <h1>
+      甘味甘舎
+    </h1>
 
     <div class="subtitle">
       KANMIKANSYA
     </div>
+
   </header>
 
+
+  <!-- =========================
+       メニュー
+       ========================= -->
 
   <nav>
 
@@ -119,8 +275,16 @@
       OFFLINE
     </a>
 
+    <a href="contact.html">
+      CONTACT
+    </a>
+
   </nav>
 
+
+  <!-- =========================
+       WEB CLAP
+       ========================= -->
 
   <section class="clap">
 
@@ -139,9 +303,30 @@
   </section>
 
 
+  <!-- =========================
+       隠しページへのリンク
+       ========================= -->
+
+  <div class="hidden-link">
+
+    <a href="secret.html">
+      ❦
+    </a>
+
+  </div>
+
+
+  <!-- =========================
+       フッター
+       ========================= -->
+
   <footer>
+
     © 甘味甘舎
+
   </footer>
 
+
 </body>
+
 </html>
