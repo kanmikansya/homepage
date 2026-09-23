@@ -1,1 +1,381 @@
+<!DOCTYPE html>
+<html lang="ja">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>OFFLINE｜甘味甘舎</title>
+
+<style>
+
+/* =========================
+   基本設定
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    background: #f4f1e8;
+    color: #333;
+
+    font-family: sans-serif;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   ページ全体
+   ========================= */
+
+.container {
+    width: calc(100% - 32px);
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    padding: clamp(45px, 9vw, 70px) 0 60px;
+}
+
+
+/* =========================
+   ページタイトル
+   ========================= */
+
+.page-title {
+    text-align: center;
+
+    font-size: clamp(28px, 7vw, 34px);
+
+    font-weight: normal;
+
+    letter-spacing: 0.3em;
+
+    margin: 0 0 5px;
+}
+
+.page-subtitle {
+    text-align: center;
+
+    font-size: 12px;
+
+    letter-spacing: 0.3em;
+
+    color: #666;
+
+    margin-bottom: clamp(35px, 8vw, 50px);
+}
+
+
+/* =========================
+   区切り線
+   ========================= */
+
+.divider {
+    border-top: 1px solid #aaa;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   本の情報
+   ========================= */
+
+.book {
+    text-align: left;
+
+    margin-bottom: 45px;
+
+    padding-bottom: 35px;
+}
+
+
+/* =========================
+   本のタイトル
+   ========================= */
+
+.book-title {
+    font-size: 20px;
+
+    font-weight: normal;
+
+    letter-spacing: 0.08em;
+
+    margin: 0 0 20px;
+
+    padding-left: 13px;
+
+    border-left: 5px solid #aaa;
+}
+
+
+/* =========================
+   あらすじ
+   ========================= */
+
+.synopsis-title {
+    font-size: 13px;
+
+    color: #666;
+
+    letter-spacing: 0.12em;
+
+    margin-bottom: 5px;
+}
+
+.synopsis {
+    font-size: 14px;
+
+    letter-spacing: 0.04em;
+
+    margin: 0 0 22px;
+}
+
+
+/* =========================
+   通販案内
+   ========================= */
+
+.booth-info {
+    text-align: center;
+
+    margin-top: 20px;
+}
+
+.booth-text {
+    font-size: 13px;
+
+    color: #666;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   BOOTHボタン
+   ========================= */
+
+.booth-button {
+    display: inline-block;
+
+    padding: 10px 28px;
+
+    border: 1px solid #aaa;
+
+    background: rgba(255, 255, 255, 0.35);
+
+    color: #333;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    letter-spacing: 0.1em;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.booth-button:hover {
+    background: rgba(255, 255, 255, 0.65);
+
+    border-color: #888;
+}
+
+
+/* =========================
+   TOPへ戻る
+   ========================= */
+
+.top-link {
+    text-align: left;
+
+    margin-top: 25px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #aaa;
+}
+
+.top-link a {
+    color: #333;
+
+    font-size: 14px;
+
+    letter-spacing: 0.1em;
+
+    text-decoration: underline;
+
+    text-underline-offset: 5px;
+}
+
+
+/* =========================
+   コピーライト
+   ========================= */
+
+.copyright {
+    margin-top: 35px;
+
+    text-align: center;
+
+    color: #888;
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   スマホ用
+   ========================= */
+
+@media (max-width: 480px) {
+
+    .container {
+        width: calc(100% - 28px);
+
+        padding-top: 45px;
+    }
+
+    .book-title {
+        font-size: 18px;
+
+        padding-left: 10px;
+
+        border-left-width: 4px;
+    }
+
+    .synopsis {
+        font-size: 13px;
+    }
+
+    .booth-button {
+        width: 100%;
+
+        padding: 11px 20px;
+    }
+
+}
+
+
+/* =========================
+   タブレット・PC
+   ========================= */
+
+@media (min-width: 768px) {
+
+    .container {
+        width: calc(100% - 56px);
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <!-- =========================
+         ページタイトル
+         ========================= -->
+
+    <h1 class="page-title">
+        OFFLINE
+    </h1>
+
+    <div class="page-subtitle">
+        BOOK
+    </div>
+
+
+    <div class="divider"></div>
+
+
+    <!-- =========================
+         Nutte
+         ========================= -->
+
+    <section class="book">
+
+        <h2 class="book-title">
+            Nutte
+        </h2>
+
+
+        <div class="synopsis-title">
+            あらすじ
+        </div>
+
+        <p class="synopsis">
+
+            ここに「Nutte」のあらすじを入れます。<br>
+            本の内容を紹介する文章をここに記載します。
+
+        </p>
+
+
+        <div class="booth-info">
+
+            <div class="booth-text">
+                BOOTHにて通販中
+            </div>
+
+            <a
+                class="booth-button"
+                href="ここにBOOTHの商品ページURL"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                BOOTHで購入する
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         TOPへ戻る
+         ========================= -->
+
+    <div class="top-link">
+
+        <a href="index.html">
+            ← TOP
+        </a>
+
+    </div>
+
+
+    <!-- =========================
+         コピーライト
+         ========================= -->
+
+    <div class="copyright">
+
+        © 甘味甘舎
+
+    </div>
+
+
+</div>
+
+
+</body>
+
+</html>
