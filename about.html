@@ -1,475 +1,208 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABOUT | 甘味甘舎</title>
 
-<title>ABOUT｜甘味甘舎</title>
-
-<style>
-
-/* =========================
-   基本設定
-   ========================= */
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-
-    background: #f4f1e8;
-    color: #333;
-
-    font-family: sans-serif;
-
-    line-height: 2;
-}
-
-
-/* =========================
-   ページ全体
-   ========================= */
-
-.container {
-    width: calc(100% - 32px);
-
-    max-width: 700px;
-
-    margin: 0 auto;
-
-    padding: clamp(45px, 9vw, 70px) 0 60px;
-}
-
-
-/* =========================
-   ページタイトル
-   ========================= */
-
-.page-title {
-    text-align: center;
-
-    font-size: clamp(28px, 7vw, 34px);
-
-    font-weight: normal;
-
-    letter-spacing: 0.3em;
-
-    margin: 0 0 5px;
-}
-
-.page-subtitle {
-    text-align: center;
-
-    font-size: 12px;
-
-    letter-spacing: 0.3em;
-
-    color: #666;
-
-    margin-bottom: clamp(35px, 8vw, 50px);
-}
-
-
-/* =========================
-   区切り線
-   ========================= */
-
-.divider {
-    border-top: 1px solid #aaa;
-
-    margin-bottom: 35px;
-}
-
-
-/* =========================
-   各セクション
-   ========================= */
-
-.section {
-    text-align: left;
-
-    margin-bottom: 40px;
-
-    padding-bottom: 30px;
-
-    border-bottom: 1px solid #aaa;
-}
-
-.section:last-of-type {
-    border-bottom: none;
-}
-
-
-/* =========================
-   セクションタイトル
-   ========================= */
-
-.section-title {
-    font-size: 18px;
-
-    font-weight: normal;
-
-    letter-spacing: 0.08em;
-
-    margin: 0 0 18px;
-
-    padding-left: 13px;
-
-    border-left: 5px solid #aaa;
-}
-
-
-/* =========================
-   本文
-   ========================= */
-
-.section-text {
-    font-size: 14px;
-
-    letter-spacing: 0.04em;
-
-    margin: 0;
-}
-
-
-/* =========================
-   SNS
-   ========================= */
-
-.sns-name {
-    color: #333;
-
-    text-decoration: underline;
-
-    text-underline-offset: 4px;
-}
-
-.sns-description {
-    color: #777;
-
-    font-size: 13px;
-
-    margin-top: 5px;
-}
-
-
-/* =========================
-   LINK
-   ========================= */
-
-.link-text {
-    font-size: 14px;
-}
-
-
-/* =========================
-   注意書き
-   ========================= */
-
-.notice {
-    color: #666;
-
-    font-size: 13px;
-
-    margin-top: 20px;
-}
-
-
-/* =========================
-   管理人
-   ========================= */
-
-.admin {
-    text-align: right;
-
-    margin-top: 35px;
-
-    color: #555;
-
-    font-size: 13px;
-
-    line-height: 1.9;
-}
-
-
-/* =========================
-   TOPへ戻る
-   ========================= */
-
-.top-link {
-    text-align: left;
-
-    margin-top: 25px;
-
-    padding-top: 25px;
-
-    border-top: 1px solid #aaa;
-}
-
-.top-link a {
-    color: #333;
-
-    font-size: 14px;
-
-    letter-spacing: 0.1em;
-
-    text-decoration: underline;
-
-    text-underline-offset: 5px;
-}
-
-
-/* =========================
-   コピーライト
-   ========================= */
-
-.copyright {
-    margin-top: 35px;
-
-    text-align: center;
-
-    color: #888;
-
-    font-size: 11px;
-}
-
-
-/* =========================
-   スマホ用
-   ========================= */
-
-@media (max-width: 480px) {
-
-    .container {
-        width: calc(100% - 28px);
-
-        padding-top: 45px;
+  <style>
+    * {
+      box-sizing: border-box;
     }
 
-    .section {
-        margin-bottom: 35px;
-
-        padding-bottom: 25px;
+    body {
+      margin: 0;
+      background-color: #f4f1e8;
+      color: #333;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+        "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+      line-height: 1.9;
     }
 
-    .section-title {
-        font-size: 17px;
-
-        padding-left: 10px;
-
-        border-left-width: 4px;
+    main {
+      max-width: 575px;
+      margin: 70px auto 100px;
+      padding: 0 24px;
     }
 
-    .section-text {
-        font-size: 13px;
+    .page-title {
+      text-align: center;
+      margin-bottom: 55px;
     }
 
-    .notice {
-        font-size: 12px;
+    .page-title h1 {
+      margin: 0;
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+    }
+
+    .page-title p {
+      margin: 5px 0 0;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: #777;
+    }
+
+    section {
+      margin-bottom: 45px;
+    }
+
+    section h2 {
+      margin: 0 0 18px;
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      border-bottom: 1px solid #ccc7ba;
+      padding-bottom: 8px;
+    }
+
+    section p {
+      margin: 0;
+      font-size: 13px;
+    }
+
+    .sns-link {
+      color: #333;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .sns-link:hover {
+      opacity: 0.55;
+    }
+
+    .attention {
+      font-size: 11px;
+      color: #666;
     }
 
     .admin {
-        font-size: 12px;
+      margin-top: 70px;
+      text-align: center;
+      font-size: 11px;
+      color: #777;
+      letter-spacing: 0.08em;
     }
 
-}
-
-
-/* =========================
-   タブレット・PC
-   ========================= */
-
-@media (min-width: 768px) {
-
-    .container {
-        width: calc(100% - 56px);
+    .back {
+      margin-top: 55px;
+      text-align: center;
     }
 
-}
+    .back a {
+      color: #555;
+      text-decoration: none;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+    }
 
-</style>
+    .back a:hover {
+      opacity: 0.55;
+    }
 
+    @media (max-width: 480px) {
+      main {
+        margin-top: 55px;
+        padding: 0 22px;
+      }
+
+      .page-title {
+        margin-bottom: 45px;
+      }
+
+      section {
+        margin-bottom: 38px;
+      }
+    }
+  </style>
 </head>
-
 
 <body>
 
+  <main>
 
-<div class="container">
-
-
-    <!-- =========================
-         ページタイトル
-         ========================= -->
-
-    <h1 class="page-title">
-        ABOUT
-    </h1>
-
-    <div class="page-subtitle">
-        ABOUT THIS SITE
+    <div class="page-title">
+      <h1>ABOUT</h1>
+      <p>サイト紹介</p>
     </div>
 
+    <section>
+      <h2>ABOUT</h2>
 
-    <div class="divider"></div>
-
-
-    <!-- =========================
-         このサイトについて
-         ========================= -->
-
-    <section class="section">
-
-        <h2 class="section-title">
-            ABOUT
-        </h2>
-
-        <p class="section-text">
-
-            『キン肉マン』シリーズの二次創作サイトです。<br>
-            小説・イラストを中心に掲載しています。
-
-        </p>
-
+      <p>
+        『キン肉マン』シリーズの二次創作サイトです。<br>
+        小説・イラストを中心に掲載しています。
+      </p>
     </section>
 
+    <section>
+      <h2>CP・嗜好</h2>
 
-    <!-- =========================
-         CP・嗜好
-         ========================= -->
+      <p>
+        Jブロ（ジェイド×ブロッケンJr.）メイン。<br>
+        ブロッケンJr.右寄りです。
+      </p>
 
-    <section class="section">
+      <br>
 
-        <h2 class="section-title">
-            CP・嗜好
-        </h2>
+      <p>
+        女体化・パロディ・IF設定・独自解釈などを好みます。<br>
+        海外版アニメの設定も好んでおり、<br>
+        Jブロの親子設定を扱うことがあります。
+      </p>
 
-        <p class="section-text">
+      <br>
 
-            Jブロ（ジェイド×ブロッケンJr.）メイン。<br>
-            ブロッケンJr.右寄り。
-
-            <br><br>
-
-            女体化・パロディ・IF設定・独自解釈などあり。<br>
-            海外版アニメの設定も好んでおり、<br>
-            Jブロの親子設定を扱うことがあります。
-
-        </p>
-
-        <p class="notice">
-
-            原作とは異なる設定を含む作品がありますので、<br>
-            各作品の注意書きをご確認ください。
-            人を選ぶものは裏ページにあります。
-
-        </p>
-
+      <p class="attention">
+        原作とは異なる設定を含む作品がありますので、<br>
+        苦手なものがある方は各作品の注意書きをご確認ください。<br>
+        人を選ぶものは裏ページにあります。
+      </p>
     </section>
 
+    <section>
+      <h2>SNS</h2>
 
-    <!-- =========================
-         SNS
-         ========================= -->
-
-    <section class="section">
-
-        <h2 class="section-title">
-            SNS
-        </h2>
-
-        <p class="section-text">
-
-            BS：
-            <a href="#" class="sns-name">
-                @roziki.bsky.social
-            </a>
-
-        </p>
-
-        <p class="sns-description">
-
-            更新のお知らせやイベント参加情報など。
-
-        </p>
-
-    </section>
-
-
-    <!-- =========================
-         LINK
-         ========================= -->
-
-    <section class="section">
-
-        <h2 class="section-title">
-            LINK
-        </h2>
-
-        <p class="section-text link-text">
-
-            リンクフリー／報告不要
-
-        </p>
-
-    </section>
-
-
-    <!-- =========================
-         二次創作について
-         ========================= -->
-
-    <section class="section">
-
-        <p class="section-text">
-
-            当サイトは個人による二次創作サイトです。<br>
-            原作者様・各関係者様とは一切関係ありません。
-
-        </p>
-
-
-        <div class="admin">
-
-            甘味甘舎<br>
-            管理人：路地木 玄二
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         TOPへ戻る
-         ========================= -->
-
-    <div class="top-link">
-
-        <a href="index.html">
-            ← TOP
+      <p>
+        <a
+          class="sns-link"
+          href="https://bsky.app/profile/roziki.bsky.social"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Bluesky
         </a>
+      </p>
+    </section>
 
+    <section>
+      <h2>LINK</h2>
+
+      <p>
+        リンクフリー／報告不要
+      </p>
+
+      <br>
+
+      <p class="attention">
+        当サイトは個人による二次創作サイトです。<br>
+        原作者様・各関係者様とは一切関係ありません。
+      </p>
+    </section>
+
+    <div class="admin">
+      甘味甘舎<br>
+      管理人：路地木 玄二
     </div>
 
-
-    <!-- =========================
-         コピーライト
-         ========================= -->
-
-    <div class="copyright">
-
-        © 甘味甘舎
-
+    <div class="back">
+      <a href="index.html">← TOP</a>
     </div>
 
-
-</div>
-
+  </main>
 
 </body>
+</html>
 
-  </html>
