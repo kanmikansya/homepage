@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>WEB CLAP | 甘味甘舎</title>
+  <title>WEB CLAP｜甘味甘舎</title>
 
   <style>
     * {
@@ -15,8 +15,13 @@
       margin: 0;
       background-color: #f4f1e8;
       color: #333;
-      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
-        "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Helvetica Neue",
+        "Yu Gothic",
+        "Hiragino Kaku Gothic ProN",
+        sans-serif;
       line-height: 1.9;
     }
 
@@ -25,6 +30,8 @@
       margin: 70px auto 100px;
       padding: 0 24px;
     }
+
+    /* ページタイトル */
 
     .page-title {
       text-align: center;
@@ -47,37 +54,167 @@
 
     .divider {
       border-top: 1px solid #ccc7ba;
-      margin-bottom: 35px;
+      margin-bottom: 40px;
     }
+
+    /* 説明文 */
 
     .intro {
-      margin: 0 0 30px;
+      margin: 0 0 35px;
       text-align: center;
       font-size: 13px;
+      letter-spacing: 0.04em;
     }
 
-    .form-area {
-      width: 100%;
-      overflow: hidden;
+    /* 拍手ボタン */
+
+    .clap-button-area {
+      text-align: center;
+      margin: 35px 0 50px;
     }
 
-    .form-area iframe {
+    .clap-button {
+      display: inline-block;
+      min-width: 180px;
+      padding: 13px 25px;
+
+      border: 1px solid #999;
+      background-color: transparent;
+      color: #444;
+
+      font-family: inherit;
+      font-size: 14px;
+      letter-spacing: 0.1em;
+
+      cursor: pointer;
+
+      transition:
+        background-color 0.2s,
+        transform 0.1s;
+    }
+
+    .clap-button:hover {
+      background-color: #e8e4d9;
+    }
+
+    .clap-button:active {
+      transform: scale(0.97);
+    }
+
+    .clap-button:disabled {
+      opacity: 0.55;
+      cursor: default;
+    }
+
+    /* メッセージ */
+
+    .message-area {
+      margin-top: 10px;
+    }
+
+    .message-label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+    }
+
+    .message {
       display: block;
       width: 100%;
-      min-height: 700px;
-      border: none;
+      min-height: 140px;
+
+      padding: 13px 14px;
+
+      border: 1px solid #ccc7ba;
+      border-radius: 0;
+
+      background-color: rgba(255, 255, 255, 0.35);
+      color: #333;
+
+      font-family: inherit;
+      font-size: 14px;
+      line-height: 1.8;
+
+      resize: vertical;
+      outline: none;
     }
 
-    .back {
+    .message::placeholder {
+      color: #aaa;
+    }
+
+    .message:focus {
+      border-color: #999;
+      background-color: rgba(255, 255, 255, 0.55);
+    }
+
+    /* メッセージ送信 */
+
+    .submit-area {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .submit-button {
+      display: inline-block;
+
+      min-width: 150px;
+      padding: 11px 25px;
+
+      border: 1px solid #888;
+      background-color: transparent;
+      color: #444;
+
+      font-family: inherit;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+
+      cursor: pointer;
+
+      transition: background-color 0.2s;
+    }
+
+    .submit-button:hover {
+      background-color: #e8e4d9;
+    }
+
+    .submit-button:disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+
+    /* 送信後 */
+
+    .thanks {
+      display: none;
+
       margin-top: 35px;
-      padding-top: 25px;
+      padding: 25px 15px;
+
       border-top: 1px solid #ccc7ba;
+      border-bottom: 1px solid #ccc7ba;
+
+      text-align: center;
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    /* TOP */
+
+    .back {
+      margin-top: 55px;
+      padding-top: 25px;
+
+      border-top: 1px solid #ccc7ba;
+
       text-align: center;
     }
 
     .back a {
       color: #555;
       text-decoration: none;
+
       font-size: 11px;
       letter-spacing: 0.15em;
     }
@@ -86,15 +223,23 @@
       opacity: 0.55;
     }
 
+    /* コピーライト */
+
     .copyright {
       margin-top: 30px;
+
       text-align: center;
+
       color: #777;
+
       font-size: 11px;
       letter-spacing: 0.08em;
     }
 
+    /* スマホ */
+
     @media (max-width: 480px) {
+
       main {
         margin-top: 55px;
         padding: 0 22px;
@@ -104,12 +249,31 @@
         margin-bottom: 45px;
       }
 
+      .page-title h1 {
+        font-size: 21px;
+      }
+
       .intro {
         font-size: 12px;
       }
 
-      .form-area iframe {
-        min-height: 720px;
+      .clap-button {
+        width: 100%;
+        max-width: 240px;
+      }
+
+      .message-label {
+        font-size: 12px;
+      }
+
+      .message {
+        min-height: 130px;
+        font-size: 13px;
+      }
+
+      .submit-button {
+        width: 100%;
+        max-width: 220px;
       }
     }
   </style>
@@ -117,38 +281,262 @@
 
 <body>
 
-  <main>
+<main>
 
-    <div class="page-title">
-      <h1>WEB CLAP</h1>
-      <p>拍手</p>
+  <!-- ページタイトル -->
+
+  <div class="page-title">
+
+    <h1>WEB CLAP</h1>
+
+    <p>拍手</p>
+
+  </div>
+
+
+  <div class="divider"></div>
+
+
+  <!-- 説明文：ここだけに表示 -->
+
+  <p class="intro">
+    拍手・メッセージをありがとうございます。<br>
+    とても励みになります。
+  </p>
+
+
+  <!-- 拍手ボタン -->
+
+  <div
+    class="clap-button-area"
+    id="clapArea"
+  >
+
+    <button
+      type="button"
+      class="clap-button"
+      id="clapButton"
+      onclick="sendClap()"
+    >
+      👏 拍手する
+    </button>
+
+  </div>
+
+
+  <!-- メッセージ -->
+
+  <div id="messageSection">
+
+    <div class="message-area">
+
+      <label
+        class="message-label"
+        for="message"
+      >
+        メッセージ
+      </label>
+
+      <textarea
+        id="message"
+        class="message"
+        placeholder="ひとこといただけると嬉しいです"
+      ></textarea>
+
     </div>
 
-    <div class="divider"></div>
 
-    <p class="intro">
-      拍手・メッセージをありがとうございます。<br>
-      とても励みになります。
-    </p>
+    <!-- メッセージ送信 -->
 
-    <div class="form-area">
+    <div class="submit-area">
 
-      <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLSfgbn62qpML0nMLtTLhT9u_exzTE4SYTbzdfLgnvBjPxKuRxQ/viewform?embedded=true"
-        loading="lazy">
-      </iframe>
+      <button
+        type="button"
+        class="submit-button"
+        id="submitButton"
+        onclick="sendMessage()"
+      >
+        送信
+      </button>
 
     </div>
 
-    <div class="back">
-      <a href="index.html">← TOP</a>
-    </div>
+  </div>
 
-    <div class="copyright">
-      © 甘味甘舎
-    </div>
 
-  </main>
+  <!-- 送信完了時に表示する文章 -->
+
+  <div
+    class="thanks"
+    id="thanks"
+  >
+    ありがとうございました。
+  </div>
+
+
+  <!-- Googleフォーム送信用・非表示 -->
+
+  <iframe
+    name="hidden_iframe"
+    id="hidden_iframe"
+    style="display:none;"
+  ></iframe>
+
+
+  <!-- TOP -->
+
+  <div class="back">
+
+    <a href="index.html">
+      ← TOP
+    </a>
+
+  </div>
+
+
+  <!-- コピーライト -->
+
+  <div class="copyright">
+    © 甘味甘舎
+  </div>
+
+</main>
+
+
+<script>
+
+  /*
+   * Googleフォームの送信先
+   */
+
+  const formURL =
+    "https://docs.google.com/forms/d/e/1FAIpQLSfgbn62qpML0nMLtTLhT9u_exzTE4SYTbzdfLgnvBjPxKuRxQ/formResponse";
+
+
+  /*
+   * 拍手だけ送る
+   */
+
+  function sendClap() {
+
+    const button =
+      document.getElementById("clapButton");
+
+    button.disabled = true;
+
+    sendToGoogleForm(
+      "拍手",
+      ""
+    );
+
+    setTimeout(function() {
+
+      document.getElementById("clapArea").style.display = "none";
+
+      document.getElementById("messageSection").style.display = "none";
+
+      document.getElementById("thanks").style.display = "block";
+
+    }, 700);
+  }
+
+
+  /*
+   * 拍手＋メッセージを送る
+   */
+
+  function sendMessage() {
+
+    const button =
+      document.getElementById("submitButton");
+
+    const message =
+      document.getElementById("message").value;
+
+    button.disabled = true;
+
+    sendToGoogleForm(
+      "拍手",
+      message
+    );
+
+    setTimeout(function() {
+
+      document.getElementById("clapArea").style.display = "none";
+
+      document.getElementById("messageSection").style.display = "none";
+
+      document.getElementById("thanks").style.display = "block";
+
+    }, 700);
+  }
+
+
+  /*
+   * Googleフォームへ送信
+   */
+
+  function sendToGoogleForm(
+    clap,
+    message
+  ) {
+
+    const form =
+      document.createElement("form");
+
+    form.action = formURL;
+
+    form.method = "POST";
+
+    form.target = "hidden_iframe";
+
+    form.style.display = "none";
+
+
+    /*
+     * 拍手
+     */
+
+    const clapInput =
+      document.createElement("input");
+
+    clapInput.type = "hidden";
+
+    clapInput.name =
+      "entry.1980626123";
+
+    clapInput.value =
+      clap;
+
+    form.appendChild(clapInput);
+
+
+    /*
+     * メッセージ
+     */
+
+    const messageInput =
+      document.createElement("input");
+
+    messageInput.type = "hidden";
+
+    messageInput.name =
+      "entry.1424987301";
+
+    messageInput.value =
+      message;
+
+    form.appendChild(messageInput);
+
+
+    document.body.appendChild(form);
+
+    form.submit();
+
+    form.remove();
+  }
+
+</script>
 
 </body>
 </html>
