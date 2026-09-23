@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>CONTACT | 甘味甘舎</title>
+  <title>CONTACT｜甘味甘舎</title>
 
   <style>
     * {
@@ -15,8 +15,13 @@
       margin: 0;
       background-color: #f4f1e8;
       color: #333;
-      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
-        "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Helvetica Neue",
+        "Yu Gothic",
+        "Hiragino Kaku Gothic ProN",
+        sans-serif;
       line-height: 1.9;
     }
 
@@ -25,6 +30,8 @@
       margin: 70px auto 100px;
       padding: 0 24px;
     }
+
+    /* ページタイトル */
 
     .page-title {
       text-align: center;
@@ -50,34 +57,147 @@
       margin-bottom: 40px;
     }
 
+    /* 説明 */
+
     .description {
-      margin: 0 0 35px;
+      margin: 0 0 40px;
       font-size: 13px;
+      letter-spacing: 0.04em;
     }
 
-    /* Googleフォーム */
+    /* フォーム */
+
     .form-area {
       width: 100%;
-      overflow: hidden;
     }
 
-    .form-area iframe {
-      display: block;
-      width: 100%;
-      min-height: 850px;
-      border: none;
+    .form-group {
+      margin-bottom: 28px;
     }
+
+    .form-label {
+      display: block;
+      margin-bottom: 9px;
+
+      font-size: 13px;
+      letter-spacing: 0.08em;
+    }
+
+    .required {
+      margin-left: 7px;
+
+      color: #888;
+      font-size: 10px;
+      letter-spacing: 0.05em;
+    }
+
+    .form-input,
+    .form-textarea {
+      display: block;
+
+      width: 100%;
+
+      padding: 12px 13px;
+
+      border: 1px solid #ccc7ba;
+      border-radius: 0;
+
+      background-color: rgba(255, 255, 255, 0.35);
+      color: #333;
+
+      font-family: inherit;
+      font-size: 14px;
+
+      outline: none;
+    }
+
+    .form-input {
+      height: 45px;
+    }
+
+    .form-textarea {
+      min-height: 180px;
+      line-height: 1.8;
+      resize: vertical;
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder {
+      color: #aaa;
+    }
+
+    .form-input:focus,
+    .form-textarea:focus {
+      border-color: #999;
+      background-color: rgba(255, 255, 255, 0.55);
+    }
+
+    /* 送信ボタン */
+
+    .submit-area {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .submit-button {
+      min-width: 180px;
+
+      padding: 12px 25px;
+
+      border: 1px solid #888;
+      background-color: transparent;
+      color: #444;
+
+      font-family: inherit;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+
+      cursor: pointer;
+
+      transition: background-color 0.2s;
+    }
+
+    .submit-button:hover {
+      background-color: #e8e4d9;
+    }
+
+    .submit-button:disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+
+    /* 送信完了 */
+
+    .thanks {
+      display: none;
+
+      margin-top: 35px;
+      padding: 28px 15px;
+
+      border-top: 1px solid #ccc7ba;
+      border-bottom: 1px solid #ccc7ba;
+
+      text-align: center;
+
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    /* TOPへ戻る */
 
     .back {
       margin-top: 55px;
       padding-top: 25px;
+
       border-top: 1px solid #ccc7ba;
+
       text-align: center;
     }
 
     .back a {
       color: #555;
       text-decoration: none;
+
       font-size: 11px;
       letter-spacing: 0.15em;
     }
@@ -86,18 +206,26 @@
       opacity: 0.55;
     }
 
+    /* コピーライト */
+
     .copyright {
       margin-top: 30px;
+
       text-align: center;
+
       color: #777;
+
       font-size: 11px;
       letter-spacing: 0.08em;
     }
+
+    /* スマホ */
 
     @media (max-width: 480px) {
 
       main {
         margin-top: 55px;
+        margin-bottom: 80px;
         padding: 0 22px;
       }
 
@@ -105,12 +233,35 @@
         margin-bottom: 45px;
       }
 
+      .page-title h1 {
+        font-size: 21px;
+      }
+
       .description {
+        font-size: 12px;
+        margin-bottom: 35px;
+      }
+
+      .form-group {
+        margin-bottom: 25px;
+      }
+
+      .form-label {
         font-size: 12px;
       }
 
-      .form-area iframe {
-        min-height: 900px;
+      .form-input,
+      .form-textarea {
+        font-size: 13px;
+      }
+
+      .form-textarea {
+        min-height: 160px;
+      }
+
+      .submit-button {
+        width: 100%;
+        max-width: 220px;
       }
     }
   </style>
@@ -118,38 +269,355 @@
 
 <body>
 
-  <main>
+<main>
 
-    <div class="page-title">
-      <h1>CONTACT</h1>
-      <p>お問い合わせ</p>
+  <!-- ページタイトル -->
+
+  <div class="page-title">
+
+    <h1>CONTACT</h1>
+
+    <p>お問い合わせ</p>
+
+  </div>
+
+
+  <div class="divider"></div>
+
+
+  <!-- 説明 -->
+
+  <p class="description">
+    ご連絡はこちらからお願いします。<br>
+    感想・お問い合わせなどお気軽にどうぞ。
+  </p>
+
+
+  <!-- フォーム -->
+
+  <div
+    class="form-area"
+    id="formArea"
+  >
+
+    <!-- メールアドレス -->
+
+    <div class="form-group">
+
+      <label
+        class="form-label"
+        for="email"
+      >
+        メールアドレス
+        <span class="required">必須</span>
+      </label>
+
+      <input
+        type="email"
+        id="email"
+        class="form-input"
+        placeholder="example@example.com"
+        required
+      >
+
     </div>
 
-    <div class="divider"></div>
 
-    <p class="description">
-      ご連絡はこちらからお願いします。<br>
-      感想・お問い合わせなどお気軽にどうぞ。
-    </p>
+    <!-- お名前 -->
 
-    <div class="form-area">
+    <div class="form-group">
 
-      <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLSeEkT2CYHXtbLYypn9a2eKfZeOEOPEDIL-C7H1AEp4v8MuwMg/viewform?embedded=true"
-        loading="lazy">
-      </iframe>
+      <label
+        class="form-label"
+        for="name"
+      >
+        お名前
+        <span class="required">必須</span>
+      </label>
+
+      <input
+        type="text"
+        id="name"
+        class="form-input"
+        placeholder="お名前"
+        required
+      >
 
     </div>
 
-    <div class="back">
-      <a href="index.html">← TOP</a>
+
+    <!-- メッセージ -->
+
+    <div class="form-group">
+
+      <label
+        class="form-label"
+        for="message"
+      >
+        メッセージ
+        <span class="required">必須</span>
+      </label>
+
+      <textarea
+        id="message"
+        class="form-textarea"
+        placeholder="お問い合わせ内容をご入力ください"
+        required
+      ></textarea>
+
     </div>
 
-    <div class="copyright">
-      © 甘味甘舎
+
+    <!-- 送信 -->
+
+    <div class="submit-area">
+
+      <button
+        type="button"
+        class="submit-button"
+        id="submitButton"
+        onclick="sendContact()"
+      >
+        送信
+      </button>
+
     </div>
 
-  </main>
+  </div>
+
+
+  <!-- 送信完了 -->
+
+  <div
+    class="thanks"
+    id="thanks"
+  >
+    お問い合わせありがとうございました。
+  </div>
+
+
+  <!-- Googleフォーム送信用・非表示 -->
+
+  <iframe
+    name="contact_hidden_iframe"
+    id="contact_hidden_iframe"
+    style="display:none;"
+  ></iframe>
+
+
+  <!-- TOP -->
+
+  <div class="back">
+
+    <a href="index.html">
+      ← TOP
+    </a>
+
+  </div>
+
+
+  <!-- コピーライト -->
+
+  <div class="copyright">
+    © 甘味甘舎
+  </div>
+
+</main>
+
+
+<script>
+
+  /*
+   * Googleフォーム送信先
+   */
+
+  const formURL =
+    "https://docs.google.com/forms/d/e/1FAIpQLSeEkT2CYHXtbLYypn9a2eKfZeOEOPEDIL-C7H1AEp4v8MuwMg/formResponse";
+
+
+  /*
+   * CONTACT送信
+   */
+
+  function sendContact() {
+
+    const formArea =
+      document.getElementById("formArea");
+
+    const button =
+      document.getElementById("submitButton");
+
+
+    /*
+     * 入力内容
+     */
+
+    const email =
+      document.getElementById("email").value.trim();
+
+    const name =
+      document.getElementById("name").value.trim();
+
+    const message =
+      document.getElementById("message").value.trim();
+
+
+    /*
+     * 入力チェック
+     */
+
+    if (email === "") {
+
+      alert("メールアドレスを入力してください。");
+
+      document.getElementById("email").focus();
+
+      return;
+    }
+
+
+    /*
+     * メールアドレス形式チェック
+     */
+
+    const emailPattern =
+      /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(email)) {
+
+      alert("メールアドレスの形式を確認してください。");
+
+      document.getElementById("email").focus();
+
+      return;
+    }
+
+
+    if (name === "") {
+
+      alert("お名前を入力してください。");
+
+      document.getElementById("name").focus();
+
+      return;
+    }
+
+
+    if (message === "") {
+
+      alert("メッセージを入力してください。");
+
+      document.getElementById("message").focus();
+
+      return;
+    }
+
+
+    /*
+     * 二重送信防止
+     */
+
+    button.disabled = true;
+
+    button.textContent = "送信中…";
+
+
+    /*
+     * Googleフォームを作成
+     */
+
+    const form =
+      document.createElement("form");
+
+    form.action = formURL;
+
+    form.method = "POST";
+
+    form.target = "contact_hidden_iframe";
+
+    form.style.display = "none";
+
+
+    /*
+     * メールアドレス
+     */
+
+    const emailInput =
+      document.createElement("input");
+
+    emailInput.type = "hidden";
+
+    emailInput.name =
+      "entry.1175887988";
+
+    emailInput.value =
+      email;
+
+    form.appendChild(emailInput);
+
+
+    /*
+     * お名前
+     */
+
+    const nameInput =
+      document.createElement("input");
+
+    nameInput.type = "hidden";
+
+    nameInput.name =
+      "entry.600524003";
+
+    nameInput.value =
+      name;
+
+    form.appendChild(nameInput);
+
+
+    /*
+     * メッセージ
+     */
+
+    const messageInput =
+      document.createElement("input");
+
+    messageInput.type = "hidden";
+
+    messageInput.name =
+      "entry.385457240";
+
+    messageInput.value =
+      message;
+
+    form.appendChild(messageInput);
+
+
+    /*
+     * Googleフォームへ送信
+     */
+
+    document.body.appendChild(form);
+
+    form.submit();
+
+
+    /*
+     * 送信後の表示
+     */
+
+    setTimeout(function() {
+
+      form.remove();
+
+      formArea.style.display = "none";
+
+      document.getElementById("thanks").style.display = "block";
+
+    }, 800);
+
+  }
+
+</script>
 
 </body>
 </html>
