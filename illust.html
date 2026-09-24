@@ -1,1 +1,389 @@
 
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ILLUST｜甘味甘舎</title>
+
+<style>
+
+/* =========================
+   基本設定
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background: #f4f1e8;
+    color: #4a4540;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Helvetica Neue",
+        "Hiragino Kaku Gothic ProN",
+        "Yu Gothic",
+        YuGothic,
+        sans-serif;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   ページ全体
+   ========================= */
+
+.illust-page {
+    width: 90%;
+    max-width: 495px;
+
+    margin: 0 auto;
+
+    padding: 58px 0 55px;
+}
+
+
+/* =========================
+   ページタイトル
+   ========================= */
+
+.page-title {
+    text-align: center;
+
+    padding-bottom: 40px;
+
+    border-bottom: 1px solid #d8d4ca;
+}
+
+.page-title h1 {
+    margin: 0;
+
+    font-size: 25px;
+    font-weight: normal;
+
+    letter-spacing: 0.18em;
+    line-height: 1.4;
+}
+
+.page-title p {
+    margin: 7px 0 0;
+
+    font-size: 9px;
+
+    letter-spacing: 0.28em;
+
+    color: #777168;
+}
+
+
+/* =========================
+   ジャンル
+   ========================= */
+
+.category {
+    padding: 20px 0 28px;
+
+    border-bottom: 1px solid #d8d4ca;
+}
+
+
+/* ジャンル名 */
+
+.category h2 {
+    position: relative;
+
+    margin: 0 0 25px;
+
+    padding-left: 13px;
+
+    font-size: 13px;
+    font-weight: normal;
+
+    letter-spacing: 0.08em;
+    line-height: 1.6;
+}
+
+
+/* 左側の縦線 */
+
+.category h2::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 2px;
+
+    width: 3px;
+    height: 21px;
+
+    background: #b8b3aa;
+}
+
+
+/* =========================
+   作品番号
+   ========================= */
+
+.works {
+    display: flex;
+
+    gap: 24px;
+
+    padding-left: 32px;
+}
+
+.works a {
+    color: #4a4540;
+
+    font-size: 13px;
+
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    transition: opacity 0.2s;
+}
+
+.works a:hover {
+    opacity: 0.5;
+}
+
+
+/* =========================
+   TOPへ
+   ========================= */
+
+.back {
+    margin-top: 38px;
+}
+
+.back a {
+    color: #4a4540;
+
+    font-size: 11px;
+
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+
+/* =========================
+   WEB CLAP
+   ========================= */
+
+.web-clap {
+    margin-top: 35px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #d8d4ca;
+
+    text-align: center;
+}
+
+.web-clap-title {
+    margin: 0;
+
+    font-size: 10px;
+
+    letter-spacing: 0.28em;
+}
+
+.web-clap-text {
+    margin: 5px 0 0;
+
+    font-size: 8px;
+
+    color: #777168;
+}
+
+
+/* =========================
+   コピーライト
+   ========================= */
+
+.copyright {
+    margin-top: 45px;
+
+    text-align: center;
+
+    font-size: 8px;
+
+    color: #777168;
+}
+
+
+/* =========================
+   スマートフォン
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .illust-page {
+        width: 86%;
+
+        padding-top: 55px;
+    }
+
+    .page-title {
+        padding-bottom: 36px;
+    }
+
+    .page-title h1 {
+        font-size: 24px;
+    }
+
+    .category {
+        padding-top: 19px;
+        padding-bottom: 27px;
+    }
+
+    .category h2 {
+        font-size: 13px;
+        margin-bottom: 23px;
+    }
+
+    .works {
+        padding-left: 31px;
+        gap: 23px;
+    }
+
+}
+
+
+/* =========================
+   小さいスマートフォン
+   ========================= */
+
+@media (max-width: 380px) {
+
+    .illust-page {
+        width: 88%;
+    }
+
+    .page-title h1 {
+        font-size: 23px;
+    }
+
+    .works {
+        gap: 20px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<main class="illust-page">
+
+
+    <!-- =========================
+         ページタイトル
+         ========================= -->
+
+    <header class="page-title">
+
+        <h1>ILLUST</h1>
+
+        <p>絵や漫画</p>
+
+    </header>
+
+
+
+    <!-- =========================
+         ジェイド × ブロッケンJr.
+         ========================= -->
+
+    <section class="category">
+
+        <h2>ジェイド × ブロッケンJr.</h2>
+
+        <div class="works">
+
+            <a href="illust-jburo01.html">1</a>
+
+            <a href="illust-jburo02.html">2</a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         その他
+         ========================= -->
+
+    <section class="category">
+
+        <h2>その他</h2>
+
+        <div class="works">
+
+            <a href="illust-other01.html">1</a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         TOPへ
+         ========================= -->
+
+    <div class="back">
+
+        <a href="index.html">← TOP</a>
+
+    </div>
+
+
+
+    <!-- =========================
+         WEB CLAP
+         ========================= -->
+
+    <div class="web-clap">
+
+        <p class="web-clap-title">WEB CLAP</p>
+
+        <p class="web-clap-text">
+            ひとこといただけると嬉しいです
+        </p>
+
+    </div>
+
+
+
+    <!-- =========================
+         コピーライト
+         ========================= -->
+
+    <div class="copyright">
+
+        © 甘味甘舎
+
+    </div>
+
+
+</main>
+
+</body>
+
+</html>
